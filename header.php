@@ -34,19 +34,6 @@
 <div id="page" class="site container">
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php 
-			// Get image on frontpage post to use as the full width hero image
-			// Only if this is the homepage though
-			// Uses MetaSlider to display the image(s). 
-			// Get MetaSlider or figure something else out.
-			if (is_front_page()) { 
-				// Display logo found at the location in the argument
-				// this is a custom function, found in functions.php
-				display_logo(get_stylesheet_directory_uri() . '/public/images/logo.png');
-    			echo do_shortcode("[metaslider id=14]"); 
-    		}
-		?>
-
 		<!-- Navigation -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cah-starter' ); ?></button>
