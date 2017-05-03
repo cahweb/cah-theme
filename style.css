@@ -5,14 +5,13 @@
 sass/ 
 | 
 |– base/ 
-|   |– _normalize.scss       # Reset/normalize 
+|   |– _reset.scss       # Reset/reset 
 | 
 |– components/ 
 |   |– _buttons.scss     # Buttons 
 |   |– _carousel.scss    # Carousel 
 |   |– _cover.scss       # Cover 
 |   |– _dropdown.scss    # Dropdown 
-|   |– _navigation.scss  # Navigation 
 | 
 |– helpers/ 
 |   |– _variables.scss   # Sass Variables 
@@ -42,177 +41,52 @@ sass/
 /*--------------------------------------------------------------
 # base
 --------------------------------------------------------------*/
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-body {
-  margin: 0; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block; }
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline; }
+body {
+  line-height: 1; }
 
-audio:not([controls]) {
-  display: none;
-  height: 0; }
+ol, ul {
+  list-style: none; }
 
-[hidden],
-template {
-  display: none; }
+blockquote, q {
+  quotes: none; }
 
-a {
-  background-color: transparent; }
-
-a:active,
-a:hover {
-  outline: 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b,
-strong {
-  font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-small {
-  font-size: 80%; }
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  border: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-figure {
-  margin: 1em 40px; }
-
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-pre {
-  overflow: auto; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-button {
-  overflow: visible; }
-
-button,
-select {
-  text-transform: none; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-input {
-  line-height: normal; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0; }
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-legend {
-  border: 0;
-  padding: 0; }
-
-textarea {
-  overflow: auto; }
-
-optgroup {
-  font-weight: bold; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
 
 /*--------------------------------------------------------------
 # helpers
@@ -238,43 +112,6 @@ button:hover {
 
 .menu-toggle:focus + div #primary-menu {
   display: block; }
-
-.menu-toggle {
-  display: block; }
-
-.menu {
-  display: none;
-  list-style: none;
-  padding: 25px 0;
-  margin: 0; }
-  .menu li a {
-    display: block;
-    width: 25%;
-    margin: 0 auto;
-    padding: 10px 0;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 300; }
-  .menu li a:hover {
-    text-decoration: underline; }
-
-.menu:hover {
-  display: block; }
-
-@media only screen and (min-width: 52em) {
-  .menu-toggle {
-    display: none; }
-  .menu {
-    display: block;
-    text-align: left;
-    padding: 10px 25px; }
-    .menu li {
-      display: inline;
-      padding: 0 15px; }
-      .menu li a {
-        display: inline;
-        text-align: left; } }
 
 /*--------------------------------------------------------------
 # layout
@@ -398,35 +235,46 @@ body {
   .hidden-sm {
     display: block; } }
 
-header {
-  position: relative;
-  top: 0;
-  left: 0; }
-  header .hero-slider {
-    margin: 0 0 10px -6% !important;
-    position: relative;
-    width: 111.6% !important;
-    z-index: 0; }
-  header .site-logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: 40px auto;
-    z-index: 1;
-    max-width: 200px; }
-  @media only screen and (min-width: 33.75em) {
-    header .site-logo {
-      position: absolute;
-      top: 40px;
-      left: 40px;
-      margin: 0;
-      max-width: 300px; } }
-  @media only screen and (min-width: 52em) {
-    header .hero-slider {
-      margin: 0 0 10px 0 !important;
-      width: 100% !important; } }
+#ucfhb {
+  position: fixed !important; }
+
+.menu-toggle {
+  display: none; }
+
+.site-header {
+  margin-top: 30px;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0 30px; }
+  .site-header #site-navigation {
+    margin: auto;
+    max-width: 1000px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .site-header #site-navigation .logo {
+      margin-right: 40px; }
+      .site-header #site-navigation .logo h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700; }
+    .site-header #site-navigation .menu {
+      flex: 1;
+      text-align: center; }
+      .site-header #site-navigation .menu li {
+        display: inline-block;
+        margin: 0 10px; }
+        .site-header #site-navigation .menu li a {
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          color: white;
+          text-decoration: none; }
 
 footer {
   text-align: left;
@@ -441,66 +289,6 @@ footer {
 /*--------------------------------------------------------------
 # themes
 --------------------------------------------------------------*/
-.edit-link {
-  display: none; }
-
-* {
-  font-family: "Proza Libre", Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1.5; }
-
-#site-navigation {
-  background-color: #043B5A; }
-  #site-navigation .menu li a {
-    color: #fff; }
-
-@media only screen and (min-width: 52em) {
-  .side-borders {
-    box-sizing: border-box;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    padding: 0 20px; } }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700; }
-
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 2rem; }
-
-h3 {
-  font-size: 1.375rem; }
-
-h4 {
-  font-size: 1.125rem; }
-
-h5 {
-  font-size: 1rem; }
-
-h6 {
-  font-size: 0.875rem; }
-
-p {
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.8;
-  letter-spacing: -0.2px; }
-
-.font-light {
-  font-weight: 300; }
-
-.font-regular {
-  font-weight: 400; }
-
-.font-heavy {
-  font-weight: 700; }
-
 /*--------------------------------------------------------------
 # vendors
 --------------------------------------------------------------*/

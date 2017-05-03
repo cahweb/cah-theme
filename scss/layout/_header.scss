@@ -1,44 +1,52 @@
-// Header
-header {
-	position: relative;
-	top: 0;
-	left: 0;
+#ucfhb {
+	position: fixed !important;
+}
 
-	.hero-slider {
-		// This is janky, probably a better way to do it
-		// it being making the header image full width on smaller screens
-		margin: 0 0 10px -6% !important;
-		position: relative;
-		width: 111.6% !important;
-		z-index: 0;
-	}
+.menu-toggle {
+	display: none;
+}
 
-	.site-logo {
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		margin: 40px auto;
-		z-index: 1;
-		max-width: 200px;
-	}
+.site-header {
+	margin-top: 30px;
+	width: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	color: white;
+	padding: 0 30px;
 
-	// Larger screen display
-	@media only screen and (min-width: $breakpoint-small) {
-		.site-logo {
-			position: absolute;
-			top: 40px;
-			left: 40px;
-			margin: 0;
-			max-width: 300px;
+	#site-navigation {
+		margin: auto;
+		max-width: 1000px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.logo {
+			margin-right: 40px;
+			h3 {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 24px;
+				font-weight: 700;
+			}
 		}
-	}
-	@media only screen and (min-width: $breakpoint-med) {
-		.hero-slider {
-			// This is janky, probably a better way to do it
-			margin: 0 0 10px 0 !important;
-			width: 100% !important;
+
+		.menu {
+			flex: 1;
+			text-align: center;
+			li {
+				display: inline-block;
+				margin: 0 10px;
+				a {
+					font-size: 14px;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					color: white;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }

@@ -23,8 +23,7 @@
 	<?php // UCF header bar is loaded in functions.php with the other scripts ?>
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 
 	<?php wp_head(); ?>
@@ -36,9 +35,13 @@
 
 		<!-- Navigation -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cah-starter' ); ?></button>
+			<div class="logo">
+				<h3>College of<br/>Arts and Humanities</h3>
+			</div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cah-starter' ); ?></button>
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
