@@ -38,6 +38,18 @@ sass/
 | 
 `– main.scss             # primary Sass file
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Tulia';
+  src: url("./public/fonts/tulia/tulia_regular-webfont.woff2"), url("./public/fonts/tulia/tulia_regular-webfont.woff"); }
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("./public/fonts/georgia/georgia.ttf"); }
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url("./public/fonts/league-gothic/LeagueGothic-Regular.otf"); }
+
 /*--------------------------------------------------------------
 # base
 --------------------------------------------------------------*/
@@ -235,19 +247,19 @@ body {
   .hidden-sm {
     display: block; } }
 
-#ucfhb {
-  position: fixed !important; }
-
 .menu-toggle {
   display: none; }
 
-.site-header {
-  margin-top: 30px;
-  width: 100%;
+.site-header-scrolled {
   position: fixed;
+  top: 0; }
+
+.site-header {
+  width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 0 30px; }
+  padding: 0 30px;
+  z-index: 150; }
   .site-header #site-navigation {
     margin: auto;
     max-width: 1000px;
@@ -255,12 +267,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .site-header #site-navigation .logo {
-      margin-right: 40px; }
-      .site-header #site-navigation .logo h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-weight: 700; }
+    .site-header #site-navigation a {
+      text-decoration: none; }
+      .site-header #site-navigation a .logo {
+        margin-right: 40px; }
+        .site-header #site-navigation a .logo h3 {
+          color: white;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 24px;
+          font-weight: 700; }
     .site-header #site-navigation .menu {
       flex: 1;
       text-align: center; }
@@ -286,9 +301,133 @@ footer {
 /*--------------------------------------------------------------
 # pages
 --------------------------------------------------------------*/
+.section {
+  max-width: 1000px;
+  padding: 50px;
+  background-color: white;
+  margin: auto; }
+  .section .title {
+    border-bottom: 1px solid #eeeeee;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto 20px auto; }
+    .section .title h1 {
+      font-size: 48px; }
+    .section .title a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      flex: 1;
+      text-align: right;
+      font-weight: 700; }
+
+.yellow {
+  background-color: #ffc904;
+  color: black;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .yellow a div {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: black;
+    padding: 15px;
+    color: #ffc904;
+    display: inline-block; }
+  .yellow img {
+    height: 100%; }
+  .yellow .yellow-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 50px; }
+    .yellow .yellow-title span {
+      font-size: 48px;
+      font-family: 'League Gothic', sans-serif;
+      text-transform: uppercase;
+      font-weight: 400; }
+
+.no-max {
+  max-width: none; }
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative; }
+  .hero .hero-words {
+    position: absolute;
+    bottom: 35%;
+    left: 10%; }
+    .hero .hero-words .hero-title {
+      background: rgba(255, 201, 4, 0.8);
+      font-size: 64px;
+      font-family: 'Tulia', sans-serif;
+      padding: 20px; }
+    .hero .hero-words .hero-subtitle {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 24px;
+      display: inline-block;
+      font-family: 'Georgia', serif;
+      color: white; }
+
+.mission {
+  display: flex; }
+  .mission .mission-column {
+    flex: 1;
+    padding: 20px 40px; }
+    .mission .mission-column h2 {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+      font-size: 32px; }
+    .mission .mission-column p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      line-height: 200%; }
+
+.departments-container {
+  display: flex; }
+  .departments-container .departments-content {
+    flex: 1; }
+    .departments-container .departments-content .title {
+      font-weight: 700;
+      border-bottom: none; }
+  .departments-container .dpeartments-aside {
+    flex: 1; }
+
+#menu-calltoaction {
+  margin-top: 20px;
+  text-align: center; }
+  #menu-calltoaction li {
+    display: inline-block;
+    margin: 0 10px;
+    background: #ffc904;
+    padding: 15px 20px; }
+    #menu-calltoaction li a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
+
 /*--------------------------------------------------------------
 # themes
 --------------------------------------------------------------*/
+.site-content {
+  position: absolute;
+  z-index: -5;
+  top: 50px;
+  width: 100%; }
+
 /*--------------------------------------------------------------
 # vendors
 --------------------------------------------------------------*/

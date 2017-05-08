@@ -38,6 +38,22 @@ sass/
 `– main.scss             # primary Sass file
 --------------------------------------------------------------*/
 
+@font-face {
+	font-family: 'Tulia';
+	src: 	url('./public/fonts/tulia/tulia_regular-webfont.woff2'),
+			url('./public/fonts/tulia/tulia_regular-webfont.woff')
+}
+
+@font-face {
+	font-family: 'Georgia';
+	src: 	url('./public/fonts/georgia/georgia.ttf');
+}
+
+@font-face {
+	font-family: 'League Gothic';
+	src: 	url('./public/fonts/league-gothic/LeagueGothic-Regular.otf');
+}
+
 /*--------------------------------------------------------------
 # base
 --------------------------------------------------------------*/

@@ -23,21 +23,22 @@
 	<?php // UCF header bar is loaded in functions.php with the other scripts ?>
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site container">
 	<header id="masthead" class="site-header" role="banner">
 
 		<!-- Navigation -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="logo">
-				<h3>College of<br/>Arts and Humanities</h3>
-			</div>
+			<a href="<?=home_url();?>">
+				<div class="logo">
+					<h3>College of<br/>Arts and Humanities</h3>
+				</div>
+			</a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 
