@@ -1,0 +1,322 @@
+/* ==========================================================================
+   General Fixes
+   ========================================================================== */
+.row {
+    margin:0px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+
+/* ==========================================================================
+   Faculty & Staff base Stylings
+   ========================================================================== */
+.faculty-row {
+    text-align:center;
+    vertical-align:text-top;
+}
+.faculty-card-2 {
+    overflow:hidden; 
+    width:45%;
+    display:inline-block;
+    background-color: #fff;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom:20px;
+    padding:15px;
+}
+
+.card-top {
+    overflow:hidden;
+}
+.row-title {
+    width:100%;
+    border-top: 1px solid #999; 
+    padding:8px; 
+    text-align:center;   
+}
+.faculty-card-2:nth-child(2n) {
+    margin-left:7%;
+}
+
+.faculty-card-2 .thumbnail {
+    margin-bottom:0px;
+    box-shadow: none;
+    border:none;
+    margin-right:10px;
+    display:block;
+    width:100px;
+    height:100px;
+    background-size: cover;
+    border-radius:100px;
+}
+
+@media screen and (max-width: 992px){
+    .faculty-card-2 {
+        width:100%;
+        margin-left:0px !important;
+    }
+}
+
+/* ==========================================================================
+   Help Page base Stylings
+   ========================================================================== */
+
+.help-title {
+    font-size:40px; 
+    margin-bottom:20px;
+    margin-top:30px;
+    margin-left:50px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.help-main h1 {
+    width:100%;
+    border-bottom: 2px solid #ffcc00;
+    line-height:60px;
+    color:#000;
+    font-family: 'Raleway', sans-serif;
+    font-size:36px;
+
+}
+.help-main h2,.help-main h3 {
+
+    color:#000;
+    font-family: 'Raleway', sans-serif;
+}
+.help-main {
+    font-size:16px;
+    font-family: 'Raleway', sans-serif;
+    color:#000;
+    padding-top:30px;
+    padding-bottom:50px;
+    margin-bottom:50px;
+     -webkit-box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+    box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+}
+.help-main a{
+     color:#337ab7;
+}
+.help-main p{
+     padding-left:30px;
+
+}
+.help-main img{
+    padding: 20px 0 30px 20px !important;
+}
+
+
+.help-main h3{
+     padding-left:30px !important;
+}
+.help-main h2{
+     padding-left:30px;
+}
+.help-main .indent-one{
+     padding-left:60px;
+}
+.help-main .indent-two{
+     padding-left:90px;
+}
+.help-main img{
+
+     padding: 20px 0 20px 0;
+}
+.help-main a{
+    font-family: 'Raleway', sans-serif !important;
+    font-weight:normal;
+}
+.help-main a:hover{
+    text-decoration:none !important;
+    color:midnightblue !important;
+}
+.help-anchor {
+        display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+.absolute-butt{
+    position:absolute !important;
+   
+}
+
+.fixed-butt{
+    position: fixed;
+}
+.help-nav {
+    background-color:rgba(255,255,255,1);
+    padding:20px 50px 20px 50px;
+    margin-top:-80px;
+    font-family: 'Raleway', sans-serif;
+    -webkit-box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+    box-shadow: 2px 3px 11px 1px rgba(0,0,0,0.28);
+    z-index:100;
+
+}
+
+.help-nav hr{
+    color:#ffcc00;
+    background-color:#ffcc00;
+    height:2px;
+    margin:5px 0 10px 0;
+}
+
+.help-nav .nav-image{
+    width:100%;
+    min-height:150px;
+    max-height:300px;
+    height:100%;
+    padding-bottom:20px;
+}
+.help-nav a{
+    font-family: 'Raleway', sans-serif;
+    font-weight:normal;
+}
+
+.help-nav a:hover{
+    text-decoration:none !important;
+    color:midnightblue !important;
+}
+.help-nav a:visited{
+    text-decoration:none !important;
+    color:#337ab7 !important;
+}
+
+.no-pad{
+        padding:0px !important;
+        margin:0 !important;
+    }
+
+
+.help-nav-header {
+    padding-top:5px;
+    padding-bottom:5px;
+    color:#000;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+
+}
+.help-nav-header:hover {
+    color:midnightblue !important;
+}
+.help-nav-sub {
+    padding-left:30px;
+    font-family: 'Raleway', sans-serif;
+}
+.help-nav-cat {
+    font-family: 'Raleway', sans-serif;
+    padding-left:15px;
+    display:inline-block;
+    color:#337ab7;
+    text-decoration:none !important;
+
+}
+.help-nav-cat:hover{
+    
+    color:midnightblue !important;
+    text-decoration:none !important;
+    
+
+}
+
+
+@media (max-width: 1448px){
+    .help-nav{position:relative;
+        margin-top:-160px;
+        
+       }
+}
+
+
+@media (max-width: 991px){
+    .help-nav{
+        position:relative;
+        margin-top:0;
+        padding-top:20px;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        box-shadow:none;
+    }
+
+    .help-title {
+    font-size:25px; 
+    margin-top:-10px;
+    margin-bottom:0px;
+    margin-left:50px;
+    margin-right:50px;
+
+    }
+    .nav-image{
+        margin-top:-10px;
+        display:none;
+        visibility:none;
+
+    }
+    .second-title{
+        display:none;
+        visibility:none;
+    }
+    .help-main h1 {
+    font-size:20px;
+    line-height:30px;
+    }
+    .help-main h2 {
+    font-size:18px;
+
+    }
+    .help-main h3 {
+    font-size:15px;
+    font-weight:bold;
+
+    }
+    .help-main{
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        box-shadow:none;
+        margin-top:-20px;
+    }
+    .hide-small{
+        display:none;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .help-nav{
+        margin-top:-15px;
+        padding:0px;
+    }
+    .help-nav img{
+        margin-top:10px;
+    }
+    .help-title {
+        font-size:20px;
+        padding-top:0;
+        margin-top:5px;
+    }
+    
+    .help-main{
+        
+        
+        word-wrap:break-word;
+    }
+    .help-main .indent-one{
+     padding-left:0px;
+}
+    .help-main .indent-two{
+         padding-left:0px;
+    }
+    p{
+        padding-left:0 !important;
+    }
+    h2{
+        padding-left:0 !important;
+    }
+    h3{
+        padding-left:0 !important;
+    }
+}
+

@@ -11,46 +11,95 @@
 	width: 100%;
 	background: rgba(0,0,0,0.8);
 	color: white;
-	padding: 0 30px;
+	padding: 5px 150px;
 	z-index: 150;
-
-	#site-navigation {
-		margin: auto;
-		max-width: 1000px;
-		height: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		a {
-			text-decoration: none;
-			.logo {
-				margin-right: 40px;
+	
+	.logo {
 				h3 {
 					color: white;
 					font-family: 'Montserrat', sans-serif;
 					font-size: 24px;
 					font-weight: 700;
+					margin:0; padding:0;
 				}
-			}
-		}
+}
 
-		.menu {
-			flex: 1;
-			text-align: center;
-			li {
-				display: inline-block;
-				margin: 0 10px;
-				a {
-					font-size: 14px;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-					font-family: 'Montserrat', sans-serif;
-					font-weight: 700;
-					color: white;
-					text-decoration: none;
-				}
-			}
+	
+	#site-navigation {
+		
+		margin: auto;
+		padding-top:8px;
+		align-items: center;
+		justify-content: center;
+
+		a {
+			font-size: 14px;
+			letter-spacing: 1px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			color: $white;
+			text-decoration: none;
 		}
+	
+	ul {
+    	margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
 	}
+	 
+	
+		li    {
+		display: block;
+		float: left;
+		line-height: 30px; /* this should be the same as your #main-nav height */
+		height: 30px; /* this should be the same as your #main-nav height */
+		margin: 0; padding: 0; /* only needed if you don't have a reset */
+		position: relative; /* this is needed in order to position sub menus */
+			a {
+				display: block;
+				padding: 0 15px;
+				text-transform: uppercase;
+			   }
+			   
+			a:not(:only-child):after {
+			  content: '▼';
+			  margin-left: 5px;
+			}
+	}
+	
+	
+	ul ul { /* this targets all sub menus */
+    display: none; /* hide all sub menus from view */
+    position: absolute;
+    top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
+}
+
+	ul ul li { /* this targets all submenu items */
+    float: none; /* overwriting our float up above */
+    width: 300px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+	
+	a { /* target all sub menu item links */
+    padding: 5px 10px; /* give our sub menu links a nice button feel */
+    text-transform:none;
+	}
+
+	a:not(:only-child):after {
+			  content: '▶';
+			  margin-left: 5px;
+			}
+	ul {
+    /* target all second, third, and deeper level sub menus */
+    left: 300px; /* this needs to match the sub menu width set above -- width + padding + borders */
+    top: 0; /* this ensures the sub menu starts in line with its parent item */
+	}
+
+}
+
+
+	ul li:hover > ul {
+    display: block; /* show sub menus when hovering over a parent */
+}
+	
+
+	}
+
+	
 }

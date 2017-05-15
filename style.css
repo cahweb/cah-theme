@@ -57,7 +57,7 @@ sass/
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -66,40 +66,40 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} */
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+/*article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block; }
-
+	display: block;
+}
 body {
-  line-height: 1; }
-
+	line-height: 1;
+}
 ol, ul {
-  list-style: none; }
-
+	list-style: none;
+}
 blockquote, q {
-  quotes: none; }
-
+	quotes: none;
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
-
+	content: '';
+	content: none;
+}
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
 /*--------------------------------------------------------------
 # helpers
 --------------------------------------------------------------*/
@@ -154,6 +154,18 @@ body {
 
 .hidden-sm {
   display: none; }
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (min-width: 33.75em) {
+    .container {
+      width: 90%; } }
+  @media only screen and (min-width: 60em) {
+    .container {
+      width: 90%;
+      max-width: 1280px; } }
 
 .row {
   position: relative;
@@ -258,38 +270,80 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 0 30px;
+  padding: 5px 150px;
   z-index: 150; }
+  .site-header .logo h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0; }
   .site-header #site-navigation {
     margin: auto;
-    max-width: 1000px;
-    height: 100px;
-    display: flex;
+    padding-top: 8px;
     align-items: center;
     justify-content: center; }
     .site-header #site-navigation a {
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #fff;
       text-decoration: none; }
-      .site-header #site-navigation a .logo {
-        margin-right: 40px; }
-        .site-header #site-navigation a .logo h3 {
-          color: white;
-          font-family: 'Montserrat', sans-serif;
-          font-size: 24px;
-          font-weight: 700; }
-    .site-header #site-navigation .menu {
-      flex: 1;
-      text-align: center; }
-      .site-header #site-navigation .menu li {
-        display: inline-block;
-        margin: 0 10px; }
-        .site-header #site-navigation .menu li a {
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
-          color: white;
-          text-decoration: none; }
+    .site-header #site-navigation ul {
+      margin: 0;
+      padding: 0;
+      /* only needed if you have not done a CSS reset */ }
+    .site-header #site-navigation li {
+      display: block;
+      float: left;
+      line-height: 30px;
+      /* this should be the same as your #main-nav height */
+      height: 30px;
+      /* this should be the same as your #main-nav height */
+      margin: 0;
+      padding: 0;
+      /* only needed if you don't have a reset */
+      position: relative;
+      /* this is needed in order to position sub menus */ }
+      .site-header #site-navigation li a {
+        display: block;
+        padding: 0 15px;
+        text-transform: uppercase; }
+      .site-header #site-navigation li a:not(:only-child):after {
+        content: '▼';
+        margin-left: 5px; }
+    .site-header #site-navigation ul ul {
+      /* this targets all sub menus */
+      display: none;
+      /* hide all sub menus from view */
+      position: absolute;
+      top: 30px;
+      /* this should be the same height as the top level menu -- height + padding + borders */ }
+    .site-header #site-navigation ul ul li {
+      /* this targets all submenu items */
+      float: none;
+      /* overwriting our float up above */
+      width: 300px;
+      /* set to the width you want your sub menus to be. This needs to match the value we set below */ }
+      .site-header #site-navigation ul ul li a {
+        /* target all sub menu item links */
+        padding: 5px 10px;
+        /* give our sub menu links a nice button feel */
+        text-transform: none; }
+      .site-header #site-navigation ul ul li a:not(:only-child):after {
+        content: '▶';
+        margin-left: 5px; }
+      .site-header #site-navigation ul ul li ul {
+        /* target all second, third, and deeper level sub menus */
+        left: 300px;
+        /* this needs to match the sub menu width set above -- width + padding + borders */
+        top: 0;
+        /* this ensures the sub menu starts in line with its parent item */ }
+    .site-header #site-navigation ul li:hover > ul {
+      display: block;
+      /* show sub menus when hovering over a parent */ }
 
 footer {
   text-align: left;
@@ -359,8 +413,13 @@ footer {
   height: 100vh;
   background-size: cover;
   position: relative; }
+  .hero h3, .hero h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 85%; }
   .hero .hero-words {
     position: absolute;
+    top: 25%;
     bottom: 35%;
     left: 10%; }
     .hero .hero-words .hero-title {
@@ -424,9 +483,9 @@ footer {
 --------------------------------------------------------------*/
 .site-content {
   position: absolute;
-  z-index: -5;
   top: 50px;
-  width: 100%; }
+  width: 100%;
+  z-index: -5; }
 
 /*--------------------------------------------------------------
 # vendors
