@@ -11,22 +11,36 @@
 	width: 100%;
 	background: rgba(0,0,0,0.8);
 	color: white;
-	padding: 5px 150px;
+	padding: 5px 0px;
 	z-index: 150;
-	
+
+	div.container {
+
+		div.row {
+			width: auto;
+			@include flexbox;
+			justify-content: center;
+		}
+	}
+
 	.logo {
+
+				a {
+					text-decoration: none;
+				}
+
 				h3 {
 					color: white;
 					font-family: 'Montserrat', sans-serif;
-					font-size: 24px;
-					font-weight: 700;
+					font-size: 20px;
+					font-weight: 500;
 					margin:0; padding:0;
 				}
 }
 
-	
+
 	#site-navigation {
-		
+
 		margin: auto;
 		padding-top:8px;
 		align-items: center;
@@ -36,16 +50,16 @@
 			font-size: 14px;
 			letter-spacing: 1px;
 			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
+			font-weight: 500;
 			color: $white;
 			text-decoration: none;
 		}
-	
+
 	ul {
     	margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
 	}
-	 
-	
+
+
 		li    {
 		display: block;
 		float: left;
@@ -57,32 +71,48 @@
 				display: block;
 				padding: 0 15px;
 				text-transform: uppercase;
+
+				span {
+					transform: translateY(4px) scale(1.2, 1.2);
+					color: rgb(255,201,4)
+				}
 			   }
-			   
+
 			a:not(:only-child):after {
-			  content: '▼';
+			  /*content: '▼';*/
+			  transform: scale(0.5, 0.5);
+			  /*content: "\f140";*/
 			  margin-left: 5px;
 			}
 	}
-	
-	
+
+
 	ul ul { /* this targets all sub menus */
     display: none; /* hide all sub menus from view */
     position: absolute;
+	background: rgb(30, 30, 30);
     top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
-}
+	padding-bottom: 5px;
+	}
 
 	ul ul li { /* this targets all submenu items */
     float: none; /* overwriting our float up above */
     width: 300px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
-	
+
 	a { /* target all sub menu item links */
+	font-weight: 400;
     padding: 5px 10px; /* give our sub menu links a nice button feel */
     text-transform:none;
+
+		span {
+			transform: translateY(5px) scale(1.2, 1.2);
+			color: rgb(255,201,4);
+		}
 	}
 
 	a:not(:only-child):after {
-			  content: '▶';
+			  /*content: '▶';*/
+			  /*content: "\f139";*/
 			  margin-left: 5px;
 			}
 	ul {
@@ -96,10 +126,11 @@
 
 	ul li:hover > ul {
     display: block; /* show sub menus when hovering over a parent */
+	z-index: 1;
 }
-	
+
 
 	}
 
-	
+
 }
