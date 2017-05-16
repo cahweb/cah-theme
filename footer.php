@@ -11,7 +11,9 @@
 
 ?>
 
-	
+
+
+</div><!-- #page -->
 
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -19,7 +21,7 @@
 		<p><?php display_footer_info(); ?></p>
 	</footer><!-- #colophon -->
 
-</div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

@@ -23,7 +23,7 @@
 	<?php // UCF header bar is loaded in functions.php with the other scripts ?>
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     
 
 	<?php wp_head(); ?>
@@ -43,6 +43,7 @@
            </div>
 	
     <div class="col-md-9">
+    
     <!-- Navigation -->
 		<nav id="site-navigation" class="navbar-collapse main-navigation" role="navigation">
         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -55,10 +56,17 @@
         </nav><!-- #site-navigation -->
 		</div>
         
-        </div>    
+        </div> 
+        
+        
      </div>
-    
+
     </header>
+    <?php if(!is_front_page()): ?>
+    
+    	<div class="row line-yellow"></div> 
+    
+    	<?php endif; ?>
 	
     <?php if(is_front_page()) $fclass="site-content";
 	      else $fclass = "container";

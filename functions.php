@@ -131,6 +131,14 @@ function cah_starter_scripts() {
 add_action( 'wp_enqueue_scripts', 'cah_starter_scripts' );
 
 /**
+ * Load Dashicons for the front end (used for nav menu).
+ */
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+	wp_enqueue_style( 'dashicons' );
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/includes/custom-header.php';
@@ -159,13 +167,13 @@ require get_template_directory() . '/includes/jetpack.php';
  * General custom functions
  * If you need to add a function put it here, and please comment it so
  * The next guy knows what the hell is going on.
- * Because chances are he'll also be an intern with 
+ * Because chances are he'll also be an intern with
  * very little PHP experience at first. Help the little guys out.
  ****/
 
-/** 
+/**
  * Little function to display logo in markup and to keep the code relatively clean
- * The default style (in the css) will make it overlay the header image/slideshow 
+ * The default style (in the css) will make it overlay the header image/slideshow
  */
 $default_logo_location = get_stylesheet_directory_uri() . '/public/images/logo.png';
 function display_logo( $logo_location ) {

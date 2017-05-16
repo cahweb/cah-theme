@@ -22,7 +22,7 @@ get_header(); ?>
 
 			</div>
 
-			<div class="section no-max">
+			<div class="section">
 				<div class="mission">
 					<div class="mission-column">
 						<h2>Intro, Mission, Whatever</h2>
@@ -34,12 +34,13 @@ get_header(); ?>
 						<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 					</div>
 				</div>
+              </div>
 
-				<?php wp_nav_menu( array( 'menu' => 'CallToAction' )); ?>
+	<!--- <div class="row nav-black">   --->
+    	<?php //wp_nav_menu( array( 'menu' => 'CallToAction' )); ?>
+	<!---  </div>    --->
 
-			</div>
-
-			<div class="yellow">
+			<div class="section yellow">
 				<div class="yellow-title">
 					<h3>Ad space, call to action, etc. Online programs?<br/><span>Grad Programs, Other</span></h3>
 				</div>

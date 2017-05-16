@@ -1,9 +1,13 @@
 footer {
-	text-align: left;
-	padding: 25px 0;
-
+	margin-top:10px;
+	
+	text-align: center;
+	padding: 20px 0;
+	background-color:#000000;
 	p {
 		font-size: 14px;
-		color: $light-grey;
+		color: $white;
 	}
+	clear:both;
+	width:100%;
 }

@@ -1,9 +1,40 @@
+html, body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {	font-weight: 500;
+	color: $link;
+	text-decoration:none;}
+
+a:hover {	text-decoration:underline;}
+
+p, li {line-height:25px; font-weight:100;}
+
+.entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
+
+.entry-title {font-size:2em;
+			  border-bottom: 3px solid #ffc907;
+			  }
+
+h1 { font-size:1.8em;}
+h2{ font-size:1.5em;}
+h3{ font-size:1.3em;}
+
+
 .site-content {
 	position: absolute;
     top: 50px;
     width: 100%;
     z-index: -5;
 }
+
+.line-yellow {
+    background-color: $yellow;
+    height: 6px;
+	z-index: -5;
+}
+
+.wp-caption-text{font-size:80%;}
 
 
 

@@ -73,22 +73,25 @@
 	height: 100vh;
 	background-size: cover;
 	position: relative;
+	
+	
 	.hero-words {
 		position: absolute;
+		top:20%;
 		bottom: 35%;
 		left: 10%;
 
 		.hero-title {
 			background: rgba(255,201,4,0.8);
-			font-size: 64px;
+			font-size: 45px;
 			font-family: 'Tulia', sans-serif;
-			padding: 20px;
+			padding:5px 10px;
 		}
 
 		.hero-subtitle {
 			background: rgba(0,0,0,0.8);
-			padding: 20px;
-			font-size: 24px;
+			padding:5px 10px;
+			font-size: 20px;
 			display: inline-block;
 			font-family: 'Georgia', serif;
 			color: white;
@@ -101,7 +104,7 @@
 
 	.mission-column {
 		flex: 1;
-		padding: 20px 40px;
+		padding: 0px 40px;
 
 		h2 {
 			margin-bottom: 30px;
