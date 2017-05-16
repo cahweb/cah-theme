@@ -210,3 +210,4 @@ function get_post_by_slug($slug) {
 		echo '<p>' . $returned_posts[0] -> post_content . '</p>';
 	}
 }
+

@@ -1,7 +1,11 @@
 @mixin flexbox() {
-
     display: -webkit-flex;
     display: -moz-flex;
     display: flex;
+}
 
+@mixin flexWrap($wrap) {
+    -webkit-flex-wrap:  $wrap;
+    -moz-flex-wrap:     $wrap;
+    flex-wrap:          $wrap;
 }

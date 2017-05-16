@@ -22,19 +22,19 @@ get_header(); ?>
 
 			</div>
 
-			<div class="section">
-				<div class="mission">
-					<div class="mission-column">
+			
+				<div class="container">
+					<div class="col-lg-6">
 						<h2>Intro, Mission, Whatever</h2>
 						<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 					</div>
 
-					<div class="mission-column">
+					<div class="col-lg-6">
 						<h2>More Copy or Links</h2>
 						<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 					</div>
-				</div>
-              </div>
+				
+            
 
 	<!--- <div class="row nav-black">   --->
     	<?php //wp_nav_menu( array( 'menu' => 'CallToAction' )); ?>
@@ -70,7 +70,7 @@ get_header(); ?>
 					<div class="departments-aside"></div>
 				</div>
 			</div>
-
+</div>
 		</main><!-- #main -->
 
 
