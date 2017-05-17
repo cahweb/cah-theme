@@ -44,7 +44,7 @@ get_header(); ?>
 
 			</div>
 
-			<div class="row yellow">
+			<div class="yellow">
 				<div class="yellow-title">
 					<h3>Ad space, call to action, etc. Online programs?<br/><span>Grad Programs, Other</span></h3>
 				</div>
@@ -74,7 +74,7 @@ get_header(); ?>
 							<a href="#"><li>Africana Studies</li></a>
 							<a href="#"><li>American Studies</li></a>
 							<a href="#"><li>English</li></a>
-							<a href="#"><li>Florida Interactive Entertainment Academy</li></a>
+							<a href="#"><li>Florida Interactive<br/> Entertainment Academy</li></a>
 							<a href="#"><li>Florida Studies</li></a>
 							<a href="#"><li>History</li></a>
 							<a href="#"><li>Judaic Studies</li></a>
@@ -102,8 +102,19 @@ get_header(); ?>
 
 					</div>
 					<div class="col-md-4 aside">
-						<img src="<?=get_stylesheet_directory_uri() . "/public/images/degree-programs.png"?>">
+						<div class="yellow-box">
+							<h1>Degree</h1>
+							<h1>Programs</h1>
+						</div>
 						
+						<p>The College has more than XX number of degree programs to cover a variety of disciplines</p>
+
+						<ul>
+							<a href="#"><li>> Bachelor's Degrees</li></a>
+							<a href="#"><li>> Graduate Degrees</li></a>
+							<a href="#"><li>> Minors</li></a>
+							<a href="#"><li>> Certificates</li></a>
+						</ul>
 					</div>
 				</div>
 			</div>

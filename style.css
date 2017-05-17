@@ -628,12 +628,80 @@ footer {
     font-size: 18px;
     font-weight: 400; }
   .degree-programs ul {
-    padding: 0; }
+    padding: 0;
+    margin-top: 20px; }
     .degree-programs ul a li {
       color: black;
       list-style: none;
       font-weight: 400;
       margin: 10px 0; }
+
+.yellow-box {
+  background: #ffc904;
+  padding: 10px;
+  display: inline-block; }
+  .yellow-box h1 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0; }
+
+.aside p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400; }
+
+.aside ul {
+  padding: 0; }
+  .aside ul a li {
+    color: black;
+    list-style: none;
+    font-weight: 400;
+    margin: 5px; }
+
+@media screen and (max-width: 992px) {
+  .row {
+    margin: 15px 0 0 0;
+    border-bottom: 1px solid #eeeeee; }
+  .hero {
+    height: unset; }
+    .hero .hero-words {
+      position: unset; }
+      .hero .hero-words .hero-subtitle {
+        display: block; }
+  #menu-calltoaction {
+    margin-top: unset; }
+  .degree-programs {
+    border: none;
+    margin-bottom: 20px; }
+  .yellow {
+    display: block;
+    height: unset;
+    padding: 20px; }
+    .yellow .yellow-title {
+      margin: auto; }
+    .yellow a div {
+      margin: 10px 0 0 0;
+      display: block;
+      text-align: center; }
+  .title {
+    display: block; }
+    .title h1 {
+      display: block;
+      text-align: center;
+      font-size: 32px; }
+    .title a {
+      display: none; } }
+
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .yellow {
+    text-align: center; }
+    .yellow a div {
+      display: inline-block; }
+  .hero {
+    height: 50vh; } }
 
 /*--------------------------------------------------------------
 # themes
@@ -652,6 +720,15 @@ a:hover {
 p, li {
   line-height: 25px;
   font-weight: 100; }
+
+ul {
+  padding: 0;
+  margin-top: 20px; }
+  ul a li {
+    color: black;
+    list-style: none;
+    font-weight: 400;
+    margin: 10px 0; }
 
 .entry-title, h1, h2, h3, h4, h5 {
   font-weight: 500; }

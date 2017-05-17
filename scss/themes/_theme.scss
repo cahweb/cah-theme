@@ -10,6 +10,17 @@ a:hover {	text-decoration:underline;}
 
 p, li {line-height:25px; font-weight:100;}
 
+ul {
+		padding: 0;
+		margin-top: 20px;
+		a li {
+			color: black;
+			list-style: none;
+			font-weight: 400;
+			margin: 10px 0;
+		}
+	}
+
 .entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
 
 .entry-title {font-size:2em;
