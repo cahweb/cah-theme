@@ -11,13 +11,10 @@
 	width: 100%;
 	background: rgba(0,0,0,0.8);
 	color: white;
-	padding: 5px 0px;
+	padding: 10px 0px;
 	z-index: 150;
-
-	.container {
-		background: none;
-		@include flexbox;
-		justify-content: space-around;
+	
+		.row {padding-left:100px; }
 
 		.navbar-header {
 			@include flexbox;
@@ -27,15 +24,7 @@
 			button {
 				margin-left: 200px;
 			}
-		}
 
-		/*
-		> div.row {
-			width: auto;
-			@include flexbox;
-			justify-content: space-around;
-		}
-		*/
 	}
 
 	.logo {

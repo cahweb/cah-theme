@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Research Page Template
+* Template Name: Publications Page Template
 *
 * Description: A page template that provides a key component of WordPress as a CMS
 * by meeting the need for a carefully crafted introductory page. The front page template
@@ -12,8 +12,13 @@
 
 
 <?php get_header(); 
-	include(getcwd() . "\\wp-content\\themes\\tbone\\common_newfunctions.php");
+//$css_uri = get_stylesheet_directory_uri(); 
+//$css_link1 = $css_uri .'/includes/bootstrap_fctable.css'; 
+include(getcwd() . "\\wp-content\\themes\\tbone\\common_newfunctions.php");
 ?>
+
+<!--- <link rel="stylesheet" type="text/css" href="<?php //echo $css_link1; ?>" media='all'> --->
+
 
 
 <div id="primary" class="content-area">
@@ -37,26 +42,12 @@
              
              <div class="row">
              
-             <div class="col-md-6">
              
-             <h2><a href="/newsroom/publications/">Recent Faculty Publications</a></h2>
-							  <?php
-								print_cah_publications(0,1,0,6,36,3,0,false,false);
-							  ?>
-							<p style="padding-top:25px;"><a href="/publications.php" class="btn btn-primary">View all recent publications</a></button></p>
-                            
-              </div>
-              
-         <div class="col-md-6">
-           <h2 id="yui-gen13">Featured Projects</h2>
-             <a href="http://chdr.cah.ucf.edu/spaceandspirituality/"><img src="http://www.cah.ucf.edu/images/researchfeature/sss.jpg" width="385" height="188"></a><br><br>
-             <a href="https://riches.cah.ucf.edu/?page_id=1764"><img src="http://www.cah.ucf.edu/images/researchfeature/richespodcast.jpg" width="385" height="188"></a><br><br>
-             <a href="http://writingandrhetoric.cah.ucf.edu/showcase.php"><img src="http://www.cah.ucf.edu/images/researchfeature/knightswrite.jpg" width="385" height="188"></a><br><br>
-             
-           <a href="http://brockdenbrown.cah.ucf.edu/"><img src="http://www.cah.ucf.edu/images/researchfeature/brockdenbrown.jpg" width="385" height="188"></a>
-                
-          </div>
-                            
+							  <?
+					
+						print_cah_publications(0,1,0,0,36,3,0,false,false);
+					?>
+
               </div>
              
 		</main><!-- #main -->
