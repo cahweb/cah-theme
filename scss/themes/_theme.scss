@@ -8,7 +8,9 @@ a {	font-weight: 500;
 
 a:hover {	text-decoration:underline;}
 
-p, li {line-height:25px; font-weight:100;}
+p, li, td, td a, label {line-height:25px; font-weight:100;}
+
+td {font-size:88%;}
 
 .entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
 
@@ -36,5 +38,5 @@ h3{ font-size:1.3em;}
 
 .wp-caption-text{font-size:80%;}
 
-
+#content{ padding-top:28px; min-height:500px;}
 
