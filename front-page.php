@@ -11,7 +11,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main row" role="main">
+		<main id="main" class="site-main" role="main">
 			
 			<div class="hero" style="background-image: url(<?=get_stylesheet_directory_uri() . "/public/images/hero.jpg"?>);">
 				
@@ -23,24 +23,28 @@ get_header(); ?>
 			</div>
 
 			
-				<div class="container">
-					<div class="col-lg-6">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
 						<h2>Intro, Mission, Whatever</h2>
 						<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 					</div>
 
-					<div class="col-lg-6">
+					<div class="col-md-6">
 						<h2>More Copy or Links</h2>
 						<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 					</div>
+				</div>
 				
             
 
-	<!--- <div class="row nav-black">   --->
-    	<?php //wp_nav_menu( array( 'menu' => 'CallToAction' )); ?>
-	<!---  </div>    --->
+				<div class="row">
+				    <?php wp_nav_menu( array( 'menu' => 'CallToAction' )); ?>
+				</div>
 
-			<div class="section yellow">
+			</div>
+
+			<div class="row yellow">
 				<div class="yellow-title">
 					<h3>Ad space, call to action, etc. Online programs?<br/><span>Grad Programs, Other</span></h3>
 				</div>
@@ -48,17 +52,17 @@ get_header(); ?>
 				<a href="#"><div>Learn More</div></a>
 			</div>
 
-			<div class="section">
-				<div class="title">
-					<h1>News</h1>
-					<a href="#">Check out more stories</a>
+			<div class="container">
+				<div class="row">
+					<div class="title">
+						<h1>News/Latest Stories</h1>
+						<a href="#">Check out more stories</a>
+					</div>
+					<?php do_shortcode('[news]'); ?>
 				</div>
-				<?php do_shortcode('[news]'); ?>
-			</div>
 
-			<div class="section">
-				<div class="departments-container">
-					<div class="departments-content">
+				<div class="row">
+					<div class="col-md-8 degree-programs">
 						
 						<div class="title">
 							<h1>Departments</h1>
@@ -66,11 +70,45 @@ get_header(); ?>
 
 						<p>The College of Arts and Humanities at UCF houses a variety of disciplines and entities, some of which may not belong in this prominent position on the homepage.</p>
 
+						<ul class="col-md-6">
+							<a href="#"><li>Africana Studies</li></a>
+							<a href="#"><li>American Studies</li></a>
+							<a href="#"><li>English</li></a>
+							<a href="#"><li>Florida Interactive<br/> Entertainment Academy</li></a>
+							<a href="#"><li>Florida Studies</li></a>
+							<a href="#"><li>History</li></a>
+							<a href="#"><li>Judaic Studies</li></a>
+							<a href="#"><li>Latin American Studies</li></a>
+							<a href="#"><li>Middle Eastern Studies</li></a>
+							<a href="#"><li>Modern Languages and Literatures</li></a>
+							<a href="#"><li>Performing Arts</li></a>
+							<a href="#"><li>Philosophy</li></a>
+						</ul>
+
+						<ul class="col-md-6">
+							<a href="#"><li>Texts and Technology, Ph.D.</li></a>
+							<a href="#"><li>Visual Arts and Design</li></a>
+							<a href="#"><li>Women's and Gender Studies</li></a>
+							<a href="#"><li>Writing and Rhetoric</li></a>
+							<a href="#"><li>Center for Humanities and Digital Research</li></a>
+							<a href="#"><li>Center for Research and Education in Arts, Technology and Entertainment</li></a>
+							<a href="#"><li>CAH Student Advising</li></a>
+							<a href="#"><li>Flying Horse Editions</li></a>
+							<a href="#"><li>Technology Office</li></a>
+							<a href="#"><li>UCF Art Gallery</li></a>
+							<a href="#"><li>University Writing Center</li></a>
+							<a href="#"><li>Zora Neale Hurston Institute</li></a>
+						</ul>
+
 					</div>
-					<div class="departments-aside"></div>
+					<div class="col-md-4 aside">
+						<div class="yellow-box">
+							<h1>Degree Programs</h1>
+						</div>
+						
+					</div>
 				</div>
 			</div>
-</div>
 		</main><!-- #main -->
 
 

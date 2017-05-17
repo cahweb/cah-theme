@@ -211,3 +211,55 @@ function get_post_by_slug($slug) {
 	}
 }
 
+/**
+ * Display Events index shortcode
+ */
+add_shortcode('events', 'display_events_index');
+
+function display_events_index($atts = [], $content = null, $tag = '') {
+
+	$atts = array_change_key_case((array)$atts, CASE_LOWER);
+	$events_atts = shortcode_atts([
+		'path' => 'upcoming/',
+		'numposts' => '4'
+	], $atts, $tag);
+
+	$events_url = 'https://events.ucf.edu/calendar/3611/cah-events/';
+	$json = array();
+	
+
+	$file = file_get_contents($events_url . $events_atts['path'] . 'feed.json');
+
+	if (!empty($file)) {
+		$result = json_decode($file);
+		$json = array_merge($result, $json);
+	} else {
+		echo "Something went wrong while retrieving events.";
+	}
+
+	echo '<div class="cah-events">';
+	echo "<h2>Upcoming Events</h2>";
+
+	$num_posts = $events_atts['numposts'];
+	$count = 0;
+
+	foreach ($json as $post) {
+
+		if ($count == $num_posts) { break; }
+
+		$title = $post->{"title"};
+		$starts = date("F j", strtotime($post->{"starts"}));
+		$ends = date("F j", strtotime($post->{"ends"}));;
+		$location = $post->{"location"};
+		$description = substr($post->{"description"}, 0, 200) . "...";
+
+		?>
+			<div class="cah-events-item">
+				<h3><?=$starts?></h3>
+				<h4><?=$title?></h4>
+				<p><?=$description?></p>
+			</div>
+		<?php
+		
+	}
+}

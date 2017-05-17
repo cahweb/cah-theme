@@ -12,26 +12,7 @@
 
 
 <?php get_header(); 
-//$css_uri = get_stylesheet_directory_uri(); 
-//$css_link1 = $css_uri .'/includes/bootstrap_fctable.css'; 
-include(getcwd() . "\\wp-content\\themes\\tbone\\common_newfunctions.php");
-?>
-
-<!--- <link rel="stylesheet" type="text/css" href="<?php //echo $css_link1; ?>" media='all'> --->
-
-
-
-<?php
-define("DEPT",46);
-define("SDEPT",0);
-$positionholder = "";
-$outHTML = "";
-if(isset($_GET['id']))
-$id = intval($_GET['id']);
-$filename = "";
-
-//print $sql;
-
+	include(getcwd() . "\\wp-content\\themes\\tbone\\common_newfunctions.php");
 ?>
 
 
