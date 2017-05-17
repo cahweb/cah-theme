@@ -503,21 +503,23 @@ footer {
 .row {
   margin-top: 30px;
   margin-bottom: 30px; }
-  .row .title {
-    border-bottom: 1px solid #eeeeee;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: baseline;
-    margin: 0 auto 20px auto; }
-    .row .title h1 {
-      font-size: 48px; }
-    .row .title a {
-      text-decoration: none;
-      color: black;
-      text-transform: uppercase;
-      flex: 1;
-      text-align: right;
-      font-weight: 700; }
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: baseline;
+  color: black;
+  margin: 0 auto 20px auto; }
+  .title h1 {
+    font-size: 48px;
+    font-weight: 700; }
+  .title a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    flex: 1;
+    text-align: right;
+    font-weight: 700; }
 
 .yellow {
   background-color: #ffc904;
@@ -606,7 +608,7 @@ footer {
   text-align: center; }
   #menu-calltoaction li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px 10px;
     background: #ffc904;
     padding: 15px 20px; }
     #menu-calltoaction li a {
@@ -616,6 +618,22 @@ footer {
       text-decoration: none;
       letter-spacing: 1px;
       text-transform: uppercase; }
+
+.cah-news-site {
+  display: none !important; }
+
+.degree-programs {
+  border-right: 1px solid black; }
+  .degree-programs p {
+    font-size: 18px;
+    font-weight: 400; }
+  .degree-programs ul {
+    padding: 0; }
+    .degree-programs ul a li {
+      color: black;
+      list-style: none;
+      font-weight: 400;
+      margin: 10px 0; }
 
 /*--------------------------------------------------------------
 # themes
