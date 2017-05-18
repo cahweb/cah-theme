@@ -8,7 +8,7 @@ a {	font-weight: 500;
 
 a:hover {	text-decoration:underline;}
 
-p, li, td, td a, label {line-height:25px; font-weight:100;}
+p, li, td, td a, label {line-height:18px; font-weight:100;}
 
 td {font-size:88%;}
 
@@ -26,7 +26,7 @@ ul {
 .entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
 
 .entry-title {font-size:2em;
-			  border-bottom: 3px solid #ffc907;
+			  
 			  }
 
 h1 { font-size:1.8em;}
@@ -49,5 +49,18 @@ h3{ font-size:1.3em;}
 
 .wp-caption-text{font-size:80%;}
 
-#content{ padding-top:28px; min-height:500px;}
+#content{ 
+	margin-top: -150px;
+	padding-top:150px; min-height:500px;
+}
+
+.content-scrolled {
+	margin-top: unset;
+}
+
+.yellow-line {
+	border-top: 3px solid $gold;
+	width: 100px;
+	margin: 0 0 20px 0;
+}
 

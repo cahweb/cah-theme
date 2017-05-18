@@ -8,19 +8,18 @@
 
 
 <div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 
-			<header class="entry-header">
-                            <h1 class="entry-title"><? echo get_the_title(); ?></h1>
-            </header><br>
-		</main><!-- #main -->
+		<header class="entry-header">
+            <h1 class="entry-title"><? echo get_the_title(); ?></h1>
+        </header><br>
+	</main><!-- #main -->
 
-		<?php do_shortcode('[events]') ?>
-        
-     </div>
+	<?php do_shortcode('[events]') ?>
+ </div>
 
 <?php
-// get_sidebar();
+//get_sidebar();
 get_footer();
 ?>
 

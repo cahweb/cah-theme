@@ -9,3 +9,11 @@
     -moz-flex-wrap:     $wrap;
     flex-wrap:          $wrap;
 }
+
+@mixin transformation($args...) {
+
+    -webkit-transform:  $args;
+    -moz-transform:     $args;
+    -ms-transform:      $args;
+    transform:          $args;
+}

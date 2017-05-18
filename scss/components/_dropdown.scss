@@ -34,14 +34,19 @@
 				transform: translateY(4px) scale(1.2, 1.2);
 				color: rgb(255,201,4)
 			}
-		}
 
-		a:not(:only-child):after {
-			font-family: 'Glyphicons Halflings';
-			content: '\e252';
-			color:#ffc907;
-			margin-left: 5px;
-	  	}
+			&:not(:only-child) {
+
+				@include transformation(translateY(-2px));
+
+				&:after {
+					font-family: 'Glyphicons Halflings';
+					content: '\e252';
+					color:#ffc907;
+					margin-left: 5px;
+			  	}
+			}
+		}
 	}
 
 	ul ul { /* this targets all sub menus */
