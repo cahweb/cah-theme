@@ -1,3 +1,7 @@
+.home-content {
+	margin-top: -28px;
+}
+
 .row {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -128,7 +132,6 @@
 
 		.title {
 			font-weight: 700;
-			border-bottom: none;
 		}
 	}
 
@@ -182,15 +185,23 @@
 .yellow-box {
 	background: rgb(255,201,4);
 	padding: 10px;
-	display: inline-block;
-
+	display: table;
 	h1 {
+		display: table-cell;
+		vertical-align: middle;
 		color: black;
 		text-transform: uppercase;
 		font-size: 22px;
 		font-weight: 700;
 		letter-spacing: 1px;
 		margin: 0;
+	}
+
+	img {
+		margin-right: 10px;
+		display: table-cell;
+		vertical-align: middle;
+		height: 50px;
 	}
 }
 
@@ -216,7 +227,6 @@
 @media screen and (max-width: 992px){
 	.row {
 		margin: 15px 0 0 0;
-		border-bottom: 1px solid #eeeeee;
 	}
 	.hero {
 		height: unset;
@@ -253,6 +263,10 @@
 			display: block;
 			text-align: center;
 		}
+	}
+
+	.aside {
+		margin-top: 40px;
 	}
 
 	.title {

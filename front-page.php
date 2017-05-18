@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area home-content">
 		<main id="main" class="site-main" role="main">
 			
 			<div class="hero" style="background-image: url(<?=get_stylesheet_directory_uri() . "/public/images/hero.jpg"?>);">
@@ -103,8 +103,8 @@ get_header(); ?>
 					</div>
 					<div class="col-md-4 aside">
 						<div class="yellow-box">
-							<h1>Degree</h1>
-							<h1>Programs</h1>
+							<img src="<?=get_stylesheet_directory_uri() . "/public/images/degree-icon-small.png"?>">
+							<h1>Degree <br/>Programs</h1>
 						</div>
 						
 						<p>The College has more than XX number of degree programs to cover a variety of disciplines</p>

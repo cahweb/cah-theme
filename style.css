@@ -360,6 +360,9 @@ footer {
 /*--------------------------------------------------------------
 # pages
 --------------------------------------------------------------*/
+.home-content {
+  margin-top: -28px; }
+
 .row {
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -458,8 +461,7 @@ footer {
   .departments-container .departments-content {
     flex: 1; }
     .departments-container .departments-content .title {
-      font-weight: 700;
-      border-bottom: none; }
+      font-weight: 700; }
   .departments-container .dpeartments-aside {
     flex: 1; }
 
@@ -499,14 +501,21 @@ footer {
 .yellow-box {
   background: #ffc904;
   padding: 10px;
-  display: inline-block; }
+  display: table; }
   .yellow-box h1 {
+    display: table-cell;
+    vertical-align: middle;
     color: black;
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0; }
+  .yellow-box img {
+    margin-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px; }
 
 .aside p {
   margin-top: 20px;
@@ -523,8 +532,7 @@ footer {
 
 @media screen and (max-width: 992px) {
   .row {
-    margin: 15px 0 0 0;
-    border-bottom: 1px solid #eeeeee; }
+    margin: 15px 0 0 0; }
   .hero {
     height: unset; }
     .hero .hero-words {
@@ -546,6 +554,8 @@ footer {
       margin: 10px 0 0 0;
       display: block;
       text-align: center; }
+  .aside {
+    margin-top: 40px; }
   .title {
     display: block; }
     .title h1 {
