@@ -24,6 +24,7 @@
 					while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
 						<header class="entry-header">
                             <h1 class="entry-title"><? echo get_the_title(); ?></h1>
+                            <hr class="yellow-line">
                         </header>
                         
                         <div class="entry-content-page">
@@ -43,7 +44,7 @@
 							  <?php
 								print_cah_publications(0,1,0,6,36,3,0,false,false);
 							  ?>
-							<p style="padding-top:25px;"><a href="/publications.php" class="btn btn-primary">View all recent publications</a></button></p>
+							<p style="padding-top:25px;"><a href="/newsroom/publications/" class="btn btn-primary">View all recent publications</a></button></p>
                             
               </div>
               

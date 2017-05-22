@@ -14,6 +14,9 @@
  * section of this file
  */
 
+// Register Custom Navigation Walker
+// require_once('wp-bootstrap-navwalker.php');
+
 if ( ! function_exists( 'cah_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -121,6 +124,8 @@ function cah_starter_scripts() {
 
 	wp_enqueue_script( 'cah-starter-skip-link-focus-fix', get_template_directory_uri() . '/public/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	// wp_enqueue_script( 'responsive-menu-fix', get_template_directory_uri() . '/public/js/menu-fix.js', array('jquery'), '20170518', true);
+
 	// UCF Header bar
 	wp_enqueue_script( 'cahweb-starter-ucfhb-script', '//universityheader.ucf.edu/bar/js/university-header.js', array(), '20151215', true );
 
@@ -184,12 +189,29 @@ function display_logo( $logo_location ) {
  * Display copyright info for footer
  */
 function display_footer_info() {
-	echo get_bloginfo() . '&nbsp; | &nbsp;' . 'College of Arts and Humanities';
+	echo get_bloginfo() . '&nbsp; | &nbsp;' . 'University of Central Florida';
 	echo '<br>';
 	// This should be changed to have site info stored in a plugin and pulled dynamically here
-	echo 'Phone: 407-823-xxxx' . '&nbsp; | &nbsp;' . get_bloginfo('admin_email');
+	echo '<a href="' . get_site_url() . "/about/contact/" . '">';
+	echo '<u>Contact info</u>';
+	echo '</a>';
+
+	echo '&nbsp; | &nbsp;';
+
+	echo '<a href="tel:+14078232251">';
+	echo 'Phone: 407.823.2251';
+	echo '</a>';
+	echo '<br>';
+
+	echo '12421 Aquarius Agora Dr., Orlando, FL 32816';
 	echo '<br><br>';
-	echo 'Copyright &copy; ' . date("Y") . ' University of Central Florida';
+
+	echo '<a href="https://www.facebook.com/UCFCAH" class="footer-facebook">';
+	echo '<img src="' . get_stylesheet_directory_uri() . '/public/images/facebook-icon.png">';
+	echo '</a>';
+	echo '<br><br>';
+
+	echo '&copy; ' . date("Y") . ' University of Central Florida';
 }
 
 /**
@@ -226,7 +248,7 @@ function display_events_index($atts = [], $content = null, $tag = '') {
 
 	$events_url = 'https://events.ucf.edu/calendar/3611/cah-events/';
 	$json = array();
-	
+
 
 	$file = file_get_contents($events_url . $events_atts['path'] . 'feed.json');
 
@@ -237,29 +259,34 @@ function display_events_index($atts = [], $content = null, $tag = '') {
 		echo "Something went wrong while retrieving events.";
 	}
 
-	echo '<div class="cah-events">';
-	echo "<h2>Upcoming Events</h2>";
+	echo '<div class="cah-events row">';
 
 	$num_posts = $events_atts['numposts'];
 	$count = 0;
 
 	foreach ($json as $post) {
 
-		if ($count == $num_posts) { break; }
+		if ($count == $num_posts) {
+			break;
+		}
 
 		$title = $post->{"title"};
 		$starts = date("F j", strtotime($post->{"starts"}));
 		$ends = date("F j", strtotime($post->{"ends"}));;
 		$location = $post->{"location"};
-		$description = substr($post->{"description"}, 0, 200) . "...";
+		$description = strip_tags(substr($post->{"description"}, 0, 200) . "...");
+		$url = $post->{"url"};
 
 		?>
-			<div class="cah-events-item">
+			<div class="cah-events-item col-6" onclick="location.href='<?=$url?>'">
 				<h3><?=$starts?></h3>
 				<h4><?=$title?></h4>
-				<p><?=$description?></p>
+				<div class="cah-events-description"><?=$description?></div>
 			</div>
 		<?php
-		
+
+		$count++;
 	}
+
+	echo "</div>";
 }

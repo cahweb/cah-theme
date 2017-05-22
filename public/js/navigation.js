@@ -4,6 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
+
 var sh = jQuery(".site-header");
 
 jQuery(window).scroll(function() {

@@ -1,3 +1,5 @@
+
+
 .home-content {
 	margin-top: -28px;
 }
@@ -78,15 +80,15 @@
 
 	.hero-words {
 		position: absolute;
-		top:20%;
 		bottom: 35%;
-		left: 10%;
+		left: 5%;
 
 		.hero-title {
 			background: rgba(255,201,4,0.8);
-			font-size: 45px;
+			font-size: 40px;
 			font-family: 'Tulia', sans-serif;
-			padding:5px 10px;
+			padding:5px 0;
+			overflow: hidden;
 		}
 
 		.hero-subtitle {
@@ -122,6 +124,44 @@
 			line-height: 200%;
 		}
 	}
+}
+
+.events {
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+
+	.title h1, a {
+		color: white;
+	}
+
+	h4 {
+		color: white;
+	}
+
+	div .cah-events-description {
+		color: $light-grey;
+	}
+
+	.cah-events-item:hover {
+		background-color: #333;
+	}
+
+	@media screen and (max-width:992px) {
+		background: black !important;
+	}
+
+}
+
+.video {
+	padding: 50px 0;
+	background-color: black;
+}
+
+.video-container {
+	text-align: center;
+	margin: 0 !important;
+	padding: 20px;
 }
 
 .departments-container {
@@ -166,9 +206,16 @@
 
 .degree-programs {
 	border-right: 1px solid black;
+
+	.title h1 {
+		text-align: left !important;
+	}
+
+
 	p {
-		font-size: 18px;
+		font-size: 1em;
 		font-weight: 400;
+		color: #333;
 	}
 	ul {
 		padding: 0;
@@ -180,6 +227,10 @@
 			margin: 10px 0;
 		}
 	}
+}
+
+.aside ul a li {
+	font-size: 1.5em;
 }
 
 .yellow-box {
@@ -208,7 +259,7 @@
 .aside {
 	p {
 		margin-top: 20px;
-		font-size: 18px;
+		font-size: 1em;
 		font-weight: 400;
 	}
 
@@ -224,24 +275,42 @@
 
 }
 
+@media screen and (max-width: 767px){
+	.site-content {
+		margin-top: 0;
+	}
+
+	.hero {
+
+		.hero-title h2 {
+			font-size: 35px;
+		}
+	}
+}
+
 @media screen and (max-width: 992px){
+	.site-content {
+		padding-top: 106px;
+	}
 	.row {
 		margin: 15px 0 0 0;
 	}
 	.hero {
-		height: unset;
-
+		height: auto;
 		.hero-words {
-			position: unset;
+			left: 0 !important;
+			position: relative;
 
 			.hero-subtitle {
-				display: block;
+				display: none;
 			}
 		}
 	}
 
+	
+
 	#menu-calltoaction {
-		margin-top: unset;
+		margin-top: 0;
 	}
 
 	.degree-programs {
@@ -251,7 +320,7 @@
 
 	.yellow {
 		display: block;
-		height: unset;
+		height: auto;
 		padding: 20px;
 
 		.yellow-title {
@@ -280,9 +349,17 @@
 			display: none;
 		}
 	}
+
+	.video {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 992px) and (min-width: 767px) {
+	.site-content {
+		padding-top: 225px;
+	}
+
 	.yellow {
 		text-align: center;
 

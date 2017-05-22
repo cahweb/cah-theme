@@ -8,29 +8,50 @@ a {	font-weight: 500;
 
 a:hover {	text-decoration:underline;}
 
-p, li, td, td a, label {line-height:18px; font-weight:100;}
+p, li, td, td a, label {
+	line-height:1.5em; 
+	font-weight:100;
+}
 
 td {font-size:88%;}
 
 ul {
-		padding: 0;
-		margin-top: 20px;
-		a li {
-			color: black;
-			list-style: none;
-			font-weight: 400;
-			margin: 10px 0;
-		}
+	list-style-position: inside;
+	padding: 0;
+	margin-top: 20px;
+	a li {
+		color: black;
+		list-style: none;
+		font-weight: 400;
+		margin: 10px 0;
 	}
+}
+
+.entry-content ul {
+	padding-left: 25px;
+	list-style: disc outside none;
+
+	li {
+		padding: 10px 0;
+	}
+}
+
+.entry-header {
+	margin-top: 50px;
+}
 
 .entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
 
-.entry-title {font-size:2em;
+.entry-title {font-size:2.5em;
 			  
 			  }
 
-h1 { font-size:1.8em;}
-h2{ font-size:1.5em;}
+h1 { 
+	font-size: 2.5em;
+	letter-spacing: 1.3px;
+}
+
+h2{ font-size:1.8em;}
 h3{ font-size:1.3em;}
 
 
@@ -49,18 +70,24 @@ h3{ font-size:1.3em;}
 
 .wp-caption-text{font-size:80%;}
 
-#content{ 
-	margin-top: -150px;
-	padding-top:150px; min-height:500px;
+.content-scrolled {
+	padding-top: 78px;
 }
 
-.content-scrolled {
-	margin-top: unset;
+.splash {
+	height: 40vh;
+	width: 100%;
+	border-bottom: 5px solid $gold;
+	background-size: cover;
+	background-color: black;
+	background-position: center;
 }
 
 .yellow-line {
+	display: inline-block;
 	border-top: 3px solid $gold;
 	width: 100px;
+	left: 0;
 	margin: 0 0 20px 0;
 }
 

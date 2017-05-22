@@ -18,6 +18,7 @@
 
 			<header class="entry-header">
                             <h1 class="entry-title"><? echo get_the_title(); ?></h1>
+                            <hr class="yellow-line">
             </header><br>
 		</main><!-- #main -->
 

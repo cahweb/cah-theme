@@ -29,6 +29,7 @@ include(getcwd() . "\\wp-content\\themes\\tbone\\common_newfunctions.php");
 					while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
 						<header class="entry-header">
                             <h1 class="entry-title"><? echo get_the_title(); ?></h1>
+                            <hr class="yellow-line">
                         </header>
                         
                         <div class="entry-content-page">

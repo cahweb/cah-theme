@@ -10,10 +10,24 @@
     flex-wrap:          $wrap;
 }
 
+@mixin flexDirection($dir) {
+
+    -webkit-flex-direction: $dir;
+    -moz-flex-direction:    $dir;
+    flex-direction:         $dir;
+}
+
 @mixin transformation($args...) {
 
     -webkit-transform:  $args;
     -moz-transform:     $args;
     -ms-transform:      $args;
     transform:          $args;
+}
+
+@mixin justify($just) {
+
+    -webkit-justify-content:    $just;
+    -moz-justify-content:       $just;
+    justify-content:            $just;
 }

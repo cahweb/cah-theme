@@ -1,6 +1,4 @@
 .cah-events {
-	display: flex;
-	flex-direction: column;
 
 	h3 {
 		color: $gold;
@@ -12,7 +10,6 @@
 
 
 	.cah-events-item {
-		flex: 1;
 		padding: 5px;
 
 	}
