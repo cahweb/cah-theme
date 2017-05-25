@@ -1,0 +1,93 @@
+#site-navigation, .menu-primary-container {
+
+	a {
+			font-size: 12px;
+			letter-spacing: 1px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 400;
+			color: $white;
+			text-decoration: none;
+		}
+
+	ul {
+    	margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
+	}
+
+	li    {
+		display: block;
+		float: left;
+		line-height: 30px; /* same as #site-navigation height */
+		height: 30px; /* same as #site-navigation height */
+		margin: 0; padding: 0; /* only needed if you don't have a reset */
+		position: relative; /* this is needed in order to position sub menus */
+
+		a {
+			display: block;
+			padding: 0 15px;
+			text-transform: uppercase;
+
+			&:hover {
+				color: rgb(255, 201, 4);
+			}
+
+			> span {
+				transform: translateY(4px) scale(1.2, 1.2);
+				color: rgb(255,201,4)
+			}
+
+			&:not(:only-child) {
+
+				@include transformation(translateY(-2px));
+
+				&:after {
+					font-family: 'Glyphicons Halflings';
+					content: '\e252';
+					color:#ffc907;
+					margin-left: 5px;
+			  	}
+			}
+		}
+	}
+
+	ul ul { /* this targets all sub menus */
+    	display: none; /* hide all sub menus from view */
+    	position: absolute;
+		background: rgb(30, 30, 30);
+    	top: 30px; /* same height as the top level menu -- height + padding + borders */
+		padding-bottom: 5px;
+	}
+
+	ul ul li { /* this targets all submenu items */
+    	float: none; /* overwriting our float up above */
+    	width: 300px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+
+		a { /* target all sub menu item links */
+			padding: 5px 10px; /* give our sub menu links a nice button feel */
+			text-transform: none;
+			font-weight: 400;
+		}
+
+		a:not(:only-child):after {
+			content: '\e250';
+		}
+
+		ul {
+			/* target all second, third, and deeper level sub menus */
+			left: 300px; /* this needs to match the sub menu width set above -- width + padding + borders */
+			top: 0; /* this ensures the sub menu starts in line with its parent item */
+		}
+	}
+
+
+	ul li:hover > ul {
+    display: block; /* show sub menus when hovering over a parent */
+	z-index: 1;
+	}
+}
+
+.nav-black {
+	background-color:#000;
+	height:45px;
+	clear:both;
+	margin-bottom:10px;
+}

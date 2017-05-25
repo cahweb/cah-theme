@@ -2,40 +2,40 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-sass/ 
-| 
-|– base/ 
-|   |– _reset.scss       # Reset/reset 
-| 
-|– components/ 
-|   |– _buttons.scss     # Buttons 
-|   |– _carousel.scss    # Carousel 
-|   |– _cover.scss       # Cover 
-|   |– _dropdown.scss    # Dropdown 
-| 
-|– helpers/ 
-|   |– _variables.scss   # Sass Variables 
-|   |– _functions.scss   # Sass Functions 
-|   |– _mixins.scss      # Sass Mixins 
-|   |– _helpers.scss     # Class & placeholders helpers 
-| 
-|– layout/ 
-|   |– _grid.scss        # Grid system 
-|   |– _header.scss      # Header 
-|   |– _footer.scss      # Footer 
-|   |– _sidebar.scss     # Sidebar 
-|   |– _forms.scss       # Forms 
-| 
-|– pages/ 
+sass/
+|
+|– base/
+|   |– _reset.scss       # Reset/reset
+|
+|– components/
+|   |– _buttons.scss     # Buttons
+|   |– _carousel.scss    # Carousel
+|   |– _cover.scss       # Cover
+|   |– _dropdown.scss    # Dropdown
+|
+|– helpers/
+|   |– _variables.scss   # Sass Variables
+|   |– _functions.scss   # Sass Functions
+|   |– _mixins.scss      # Sass Mixins
+|   |– _helpers.scss     # Class & placeholders helpers
+|
+|– layout/
+|   |– _grid.scss        # Grid system
+|   |– _header.scss      # Header
+|   |– _footer.scss      # Footer
+|   |– _sidebar.scss     # Sidebar
+|   |– _forms.scss       # Forms
+|
+|– pages/
 |   |– _front-page.scss	 # Front-Page specific styles
-| 
-|– themes/ 
-|   |– _theme.scss       # Default theme 
-|   |– _admin.scss       # Admin theme 
-| 
+|
+|– themes/
+|   |– _theme.scss       # Default theme
+|   |– _admin.scss       # Admin theme
+|
 |– vendors/
-| 
-| 
+|
+|
 `– main.scss             # primary Sass file
 --------------------------------------------------------------*/
 @font-face {
@@ -219,7 +219,10 @@ button:hover {
 .menu-toggle:focus + div #primary-menu {
   display: block; }
 
-#site-navigation a, .menu-primary-container a {
+#site-navigation .open > a {
+  background: none; }
+
+#site-navigation a {
   font-size: 12px;
   letter-spacing: 1px;
   font-family: 'Montserrat', sans-serif;
@@ -227,84 +230,50 @@ button:hover {
   color: #fff;
   text-decoration: none; }
 
-#site-navigation ul, .menu-primary-container ul {
+#site-navigation ul {
   margin: 0;
   padding: 0;
-  /* only needed if you have not done a CSS reset */ }
+  padding-top: 5px; }
 
-#site-navigation li, .menu-primary-container li {
-  display: block;
-  float: left;
-  line-height: 30px;
-  /* same as #site-navigation height */
-  height: 30px;
-  /* same as #site-navigation height */
+#site-navigation li {
   margin: 0;
-  padding: 0;
-  /* only needed if you don't have a reset */
-  position: relative;
-  /* this is needed in order to position sub menus */ }
-  #site-navigation li a, .menu-primary-container li a {
-    display: block;
-    padding: 0 15px;
+  padding: 0; }
+  #site-navigation li a {
+    margin: 0;
+    padding: 0px 15px;
     text-transform: uppercase; }
-    #site-navigation li a:hover, .menu-primary-container li a:hover {
+    @media screen and (min-width: 1200px) {
+      #site-navigation li a:hover {
+        color: #ffc904;
+        background: none; } }
+    #site-navigation li a span.caret {
       color: #ffc904; }
-    #site-navigation li a > span, .menu-primary-container li a > span {
-      transform: translateY(4px) scale(1.2, 1.2);
-      color: #ffc904; }
-    #site-navigation li a:not(:only-child), .menu-primary-container li a:not(:only-child) {
-      -webkit-transform: translateY(-2px);
-      -moz-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-      transform: translateY(-2px); }
-      #site-navigation li a:not(:only-child):after, .menu-primary-container li a:not(:only-child):after {
-        font-family: 'Glyphicons Halflings';
-        content: '\e252';
-        color: #ffc907;
-        margin-left: 5px; }
 
-#site-navigation ul ul, .menu-primary-container ul ul {
-  /* this targets all sub menus */
-  display: none;
-  /* hide all sub menus from view */
-  position: absolute;
-  background: #1e1e1e;
-  top: 30px;
-  /* same height as the top level menu -- height + padding + borders */
-  padding-bottom: 5px; }
+@media screen and (min-width: 1200px) {
+  #site-navigation ul ul {
+    background: #1e1e1e;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+    #site-navigation ul ul li {
+      height: auto;
+      width: 300px;
+      padding: 5px 0px; }
+      #site-navigation ul ul li a {
+        text-transform: none; } }
 
-#site-navigation ul ul li, .menu-primary-container ul ul li {
-  /* this targets all submenu items */
-  float: none;
-  /* overwriting our float up above */
-  width: 300px;
-  /* set to the width you want your sub menus to be. This needs to match the value we set below */ }
-  #site-navigation ul ul li a, .menu-primary-container ul ul li a {
-    /* target all sub menu item links */
-    padding: 5px 10px;
-    /* give our sub menu links a nice button feel */
-    text-transform: none;
-    font-weight: 400; }
-  #site-navigation ul ul li a:not(:only-child):after, .menu-primary-container ul ul li a:not(:only-child):after {
-    content: '\e250'; }
-  #site-navigation ul ul li ul, .menu-primary-container ul ul li ul {
-    /* target all second, third, and deeper level sub menus */
-    left: 300px;
-    /* this needs to match the sub menu width set above -- width + padding + borders */
-    top: 0;
-    /* this ensures the sub menu starts in line with its parent item */ }
+@media screen and (max-width: 1200px) {
+  #site-navigation .dropdown-menu {
+    padding-left: 10px; }
+  #site-navigation ul ul li a {
+    text-transform: none; } }
 
-#site-navigation ul li:hover > ul, .menu-primary-container ul li:hover > ul {
-  display: block;
-  /* show sub menus when hovering over a parent */
-  z-index: 1; }
-
-.nav-black {
-  background-color: #000;
-  height: 45px;
-  clear: both;
-  margin-bottom: 10px; }
+#site-navigation ul.list-group {
+  list-style-type: none;
+  padding: 0px 0px 0px 15px; }
+  #site-navigation ul.list-group li {
+    line-height: normal; }
 
 .cah-events h3 {
   color: #ffc904; }
@@ -326,8 +295,39 @@ button:hover {
 /*--------------------------------------------------------------
 # layout
 --------------------------------------------------------------*/
-/* This is to widen the default Bootstrap break point for the collapsible nav menu */
-@media (max-width: 1200px) {
+.site-header-scrolled {
+  position: fixed;
+  top: 0; }
+
+.site-header {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 0px 10px 0px;
+  z-index: 150; }
+  .site-header nav {
+    background: none;
+    border: none;
+    margin-bottom: 0; }
+
+.logo {
+  padding: 0; }
+  .logo h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0; }
+
+#site-navigation {
+  width: 75%;
+  margin: 0px auto; }
+  #site-navigation .container {
+    width: 100%; }
+
+@media (min-width: 768px) and (max-width: 1200px) {
   .navbar-header {
     float: none; }
   .navbar-left, .navbar-right {
@@ -344,7 +344,19 @@ button:hover {
     display: none !important; }
   .navbar-nav {
     float: none !important;
-    margin-top: 7.5px; }
+    margin-top: 7.5px;
+    display: -webkit-flex   !important;
+    display: -moz-flex      !important;
+    display: flex           !important;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column; }
+    .navbar-nav .open .dropdown-menu {
+      position: static !important;
+      width: auto !important;
+      background: none !important;
+      border: 0 !important;
+      box-shadow: none !important; }
   .navbar-nav > li {
     float: none; }
   .navbar-nav > li > a {
@@ -353,107 +365,30 @@ button:hover {
   .collapse.in {
     display: block !important; } }
 
-.menu-toggle {
-  display: none; }
-
-.site-header-scrolled {
-  position: fixed;
-  top: 0; }
-
-.site-header {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px 0px;
-  z-index: 150; }
-  .site-header .row {
-    padding-left: 100px; }
-
-.logo {
-  margin-right: 200px;
-  margin-left: 10px; }
-  .logo a {
-    text-decoration: none; }
-  .logo h3 {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0; }
-
-#site-navigation {
-  margin: auto;
-  padding-top: 8px;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none; }
-  #site-navigation .container {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center; }
-    #site-navigation .container .navbar-header {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: flex;
-      -webkit-flex-wrap: nowrap;
-      -moz-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between; }
-      #site-navigation .container .navbar-header button {
-        border-color: #c8c8c8;
-        background-color: inherit; }
-
-#nav-menu-wrapper-lg {
-  float: right; }
-
-#nav-menu-wrapper-sm > div > ul {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-@media screen and (min-width: 1200px) {
-  #nav-menu-wrapper-sm {
-    display: none !important; } }
-
 @media screen and (max-width: 1200px) {
-  #site-navigation .container {
-    -webkit-flex-wrap: nowrap !important;
-    -moz-flex-wrap: nowrap !important;
-    flex-wrap: nowrap !important;
-    -webkit-flex-direction: column !important;
-    -moz-flex-direction: column !important;
-    flex-direction: column !important;
-    -webkit-justify-content: center !important;
-    -moz-justify-content: center !important;
-    justify-content: center !important; }
-  #nav-menu-wrapper-sm div {
-    width: 200px; }
-    #nav-menu-wrapper-sm div ul {
-      -webkit-flex-direction: column !important;
-      -moz-flex-direction: column !important;
-      flex-direction: column !important;
-      -webkit-justify-content: center !important;
-      -moz-justify-content: center !important;
-      justify-content: center !important; }
-      #nav-menu-wrapper-sm div ul li {
-        position: static !important;
-        width: 200px !important; }
-      #nav-menu-wrapper-sm div ul ul {
-        background-color: rgba(0, 0, 0, 0.8);
-        position: static !important; } }
+  .site-header {
+    background: #1e1e1e; }
+  .logo {
+    padding-left: 15px; }
+  #site-navigation {
+    width: 100%; } }
+
+@media (max-width: 768px) {
+  #content {
+    padding-top: 154px; } }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #content {
+    padding-top: 140px; }
+  .hero {
+    margin-top: 0; }
+    .hero .hero-words {
+      margin-top: 0;
+      top: 0; } }
+
+@media (max-width: 992px) {
+  .hero-title h2 {
+    padding: 0px 15px !important; } }
 
 footer {
   margin-top: 50px;

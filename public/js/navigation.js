@@ -66,7 +66,7 @@ jQuery(window).scroll(function() {
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
-	function toggleFocus() {
+	/*function toggleFocus() {
 		var self = this;
 
 		// Move up through the ancestors of the current link until we hit .nav-menu.
@@ -83,7 +83,7 @@ jQuery(window).scroll(function() {
 
 			self = self.parentElement;
 		}
-	}
+	} */
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.

@@ -4,6 +4,13 @@
     display: flex;
 }
 
+@mixin flexBoxImportant() {
+
+    display: -webkit-flex   !important;
+    display: -moz-flex      !important;
+    display: flex           !important;
+}
+
 @mixin flexWrap($wrap) {
     -webkit-flex-wrap:  $wrap;
     -moz-flex-wrap:     $wrap;
@@ -30,4 +37,11 @@
     -webkit-justify-content:    $just;
     -moz-justify-content:       $just;
     justify-content:            $just;
+}
+
+@mixin borderRadius($args...) {
+
+    -webkit-border-radius:  $args;
+    -moz-border-radius:     $args;
+    border-radius:          $args;
 }

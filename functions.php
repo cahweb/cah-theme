@@ -15,7 +15,8 @@
  */
 
 // Register Custom Navigation Walker
-// require_once('wp-bootstrap-navwalker.php');
+//require_once('wp-bootstrap-navwalker.php');
+require_once('wp-bootstrap-navwalker-cah.php');
 
 if ( ! function_exists( 'cah_starter_setup' ) ) :
 /**
