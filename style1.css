@@ -719,17 +719,7 @@ footer {
     .title a {
       display: none; }
   .video {
-    /*display: none;*/ } }
-
-@media screen and (min-width: 560px) {
-  .videoscale {
-    width: 560px;
-    height: 315px; } }
-
-@media screen and (max-width: 560px) {
-  .videoscale {
-    width: 100%;
-    height: auto; } }
+    display: none; } }
 
 @media screen and (max-width: 992px) and (min-width: 767px) {
   .site-content {
