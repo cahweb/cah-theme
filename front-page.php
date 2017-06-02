@@ -110,6 +110,7 @@ get_header(); ?>
 							<a href="https://history.cah.ucf.edu/" target="_blank"><li>History</li></a>
 							<a href="https://judaicstudies.cah.ucf.edu/" target="_blank"><li>Judaic Studies</li></a>
 							<a href="https://las.cah.ucf.edu/" target="_blank"><li>Latin American Studies</li></a>
+							<a href="https://medieval.cah.ucf.edu/" target="_blank"><li>Medieval &amp; Renaissance Studies</li></a>
 							<a href="https://middleeasternstudies.cah.ucf.edu/" target="_blank"><li>Middle Eastern Studies</li></a>
 							<a href="https://mll.cah.ucf.edu/" target="_blank"><li>Modern Languages and Literatures</li></a>
 							<a href="https://performingarts.cah.ucf.edu/" target="_blank"><li>Performing Arts</li></a>
