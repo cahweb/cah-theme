@@ -726,7 +726,7 @@ ul {
     margin: 10px 0; }
 
 .entry-content p {
-  display: inline-block !important; }
+  /*display: inline-block !important; */ }
 
 .entry-content ul {
   padding-left: 25px;
