@@ -36,90 +36,36 @@
 
 <body <?php body_class(); ?>>
 
-	<!--
-	<header class="site-header">
-    	<div class="container">
-            <div class="row">
-
-            <div class="offset-lg-1 col-lg-3 logo">
-            <a href="<?=home_url();?>">
-					<h3>College of<br/>Arts and Humanities</h3>
-			</a>
-           </div>
-
-    <div class="col-lg-8"> -->
-
-    <!-- Navigation -->
-		<!-- <nav id="site-navigation" class="navbar-collapse main-navigation" role="navigation">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-			<?php esc_html_e( 'Menu', 'cah-starter' ); ?>
-            </button>
-			<?php wp_nav_menu( array(
-					'theme_location' => 'main_nav',
-					'menu'=>'primary',
-					'menu_id' => 'primary-menu') ); ?>
-        </nav> --><!-- #site-navigation -->
-		<!-- </div>
-
-        </div>
-	</div>
-	</header> -->
-
 	<header class="site-header">
 			<nav id="site-navigation" class="navbar navbar-inverse main-navigation" role="navigation">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="navbar-header">
-						<div class="logo">
-							<a href="<?=home_url();?>">
-								<h3>College of<br />Arts and Humanities</h3>
-							</a>
-						</div> <!-- .logo .navbar-brand -->
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-wrapper-sm">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-collapse-1">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
+						<a href="<?=home_url();?>" class="navbar-brand logo">
+							<h3 style="margin: 0;">College of<br />Arts and Humanities</h3>
+						</a>
 					</div> <!-- .navbar-header -->
-					<div class="collapse navbar-collapse hidden-md-down" id="nav-menu-wrapper-lg">
-						<?php wp_nav_menu( array(
-							'theme_location'	=> 'main_nav',
-							'menu' 				=> 'primary',
-							'menu_id' 			=> 'primary-menu',
-							/* 'depth'				=> 3,
-							'container'			=> 'div',
-							'container_class'	=> 'collapse navbar-collapse',
-							'container_id'		=> 'nav-menu-wrapper',
-							'menu_class'		=> 'menu nav-menu',
-							'fallback_cb'		=> 'wp_bootstrap_navwalker::fallback',
-							'walker'			=> new wp_bootstrap_navwalker() */
-
-						)); ?>
-					</div> <!-- #nav-menu-wrapper-lg -->
-
-					<div class="collapse navbar-collapse" id="nav-menu-wrapper-sm">
-						<div class="menu-hard-coded">
-							<ul>
-								<li><a href="http://www.cah.ucf.edu/about/">About</a></li>
-								<li><a href="http://www.cah.ucf.edu/academics/">Academics</a></li>
-								<li><a href="http://www.cah.ucf.edu/research/">Research</a></li>
-								<li><a href="http://www.cah.ucf.edu/newsroom-mobile/">Newsroom</a></li>
-								<li><a href="http://www.cah.ucf.edu/alumni-giving">Alumni &amp; Giving</a></li>
-							</ul>
-						</div>
-						<?php
-							/* wp_nav_menu( array(
-								'theme_location'	=> 'main_nav',
-								'menu'				=> 'primary',
-								'depth'				=> 1,
-								'menu_id'			=> 'secondary-menu',
-								'container'			=> 'div',
-								'container_class'	=> 'menu-secondary-container'
-							)); */?>
-					</div> <!-- #nav-menu-wrapper-sm -->
+				<?php
+					wp_nav_menu( array(
+						'theme_location'	=> 'main_nav',
+						'menu' 				=> 'primary',
+						'menu_id' 			=> 'primary-menu',
+						'depth'				=> 0,
+						'container'			=> 'div',
+						'container_class'	=> 'collapse navbar-collapse',
+						'container_id'		=> 'nav-menu-collapse-1',
+						'menu_class'		=> 'nav navbar-nav navbar-right',
+						'fallback_cb'		=> 'WP_CAH_Bootstrap_Navwalker::fallback',
+						'walker'			=> new WP_CAH_Bootstrap_Navwalker()
+					));
+				 ?>
 				</div> <!-- .container-fluid -->
 			</nav> <!-- #site-navigation -->
     </header>
-
 
     <?php if(is_front_page()) $fclass="site-content";
 	      else $fclass = "container";
