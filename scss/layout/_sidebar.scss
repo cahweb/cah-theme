@@ -1,0 +1,24 @@
+aside {
+	border-left: 1px solid grey;
+}
+
+.search-field {
+	margin-bottom: 20px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.search-submit {
+	display: none;
+}
+
+.sidebar-list {
+	li {
+		font-size: 12px;
+	}
+}
+
+.sidebar-news-link {
+	color: $gold;
+}

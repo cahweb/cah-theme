@@ -471,6 +471,24 @@ footer {
   footer a:hover {
     color: #999; }
 
+aside {
+  border-left: 1px solid grey; }
+
+.search-field {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 5px; }
+
+.search-submit {
+  display: none; }
+
+.sidebar-list li {
+  font-size: 12px; }
+
+.sidebar-news-link {
+  color: #ffc904; }
+
 /*--------------------------------------------------------------
 # pages
 --------------------------------------------------------------*/
@@ -543,7 +561,7 @@ footer {
       background: rgba(255, 201, 4, 0.8);
       font-size: 40px;
       font-family: 'Tulia', sans-serif;
-      padding: 5px 0;
+      padding: 10px;
       overflow: hidden; }
     .hero .hero-words .hero-subtitle {
       background: rgba(0, 0, 0, 0.8);
@@ -772,17 +790,18 @@ ul {
     font-weight: 400;
     margin: 10px 0; }
 
+.entry-content p {
+  display: inline-block !important; }
+
 .entry-content ul {
   padding-left: 25px;
   list-style: disc outside none; }
   .entry-content ul li {
     padding: 10px 0; }
 
-.entry-header {
-  margin-top: 50px; }
-
 .entry-title, h1, h2, h3, h4, h5 {
-  font-weight: 500; }
+  font-weight: 500;
+  margin-top: 0px; }
 
 .entry-title {
   font-size: 2.5em; }

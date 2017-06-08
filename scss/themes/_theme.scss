@@ -27,20 +27,27 @@ ul {
 	}
 }
 
-.entry-content ul {
-	padding-left: 25px;
-	list-style: disc outside none;
+.entry-content {
+	p {
+		display: inline-block !important;
+	}
 
-	li {
-		padding: 10px 0;
+	ul {
+		padding-left: 25px;
+		list-style: disc outside none;
+
+		li {
+			padding: 10px 0;
+		}
 	}
 }
 
 .entry-header {
-	margin-top: 50px;
+	//margin-top: 50px;
 }
 
-.entry-title, h1,h2,h3,h4,h5 {font-weight:500;}
+.entry-title, h1,h2,h3,h4,h5 {font-weight:500;
+margin-top: 0px;}
 
 .entry-title {font-size:2.5em;
 			  

@@ -36,6 +36,7 @@ function cah_starter_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	add_filter( 'edit_post_link', '__return_false' );
 
 	/*
 	 * Let WordPress manage the document title.

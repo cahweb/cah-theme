@@ -23,16 +23,24 @@
 			<?php cah_starter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
-		endif; ?>
+		endif; 
+
+		$id = get_the_id();
+
+		if(!empty(get_post_meta($id,"author"))){
+			$author = get_post_meta($id,"author",true);
+			echo "<p>By: ".$author."</p>";
+		}
+
+		?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'cah-starter' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			$thumbnail = get_the_post_thumbnail_url();
+			echo "<img style=\"height: 250px\" src=\"".$thumbnail."\"/>";
+			the_content();
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cah-starter' ),
@@ -40,8 +48,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php cah_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
