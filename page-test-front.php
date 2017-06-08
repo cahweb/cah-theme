@@ -1,13 +1,13 @@
 <?php
 /**
- * The Front Page Template
- *
- * I wish it was more explicit how this worked, other than "Name it front-page.php and it
- * will change the front page." Edit this to change the front page.
- *
- * @package cah-starter
- */
-
+* Template Name: Test front Page Template
+*
+* Description: A page template that provides a key component of WordPress as a CMS
+* by meeting the need for a carefully crafted introductory page. The front page template
+* in Twenty Twelve consists of a page content area for adding text, images, video --
+* anything you'd like -- followed by front-page-only widgets in one or two columns.
+*
+*/
 get_header(); ?>
 
 	<div id="primary" class="content-area home-content">
@@ -19,17 +19,7 @@ get_header(); ?>
         
         
 			
-			<div class="hero" style="background-image: url(<?=site_url() . "/" . $files[0]?>);">
-            
 			
-			
-				
-				<div class="hero-words">
-					<div class="hero-title"><h2>Creativity. Culture. Collaboration.</h2></div>
-					<div class="hero-subtitle"><h3>College of Arts and Humanities</h3></div>
-				</div>
-
-			</div>
 
 			
 			<div class="container">
@@ -55,7 +45,8 @@ get_header(); ?>
 			<div class="video">
 				<div class="container">
 					<div class="row video-container">
-							<iframe class="videoscale" src="https://www.youtube.com/embed/pdzdjAskWBs" frameborder="0" allowfullscreen></iframe>
+							<!--- <iframe width="560" height="315" src="https://www.youtube.com/embed/pdzdjAskWBs" frameborder="0" allowfullscreen></iframe> --->
+                            <iframe src="https://www.youtube.com/embed/pdzdjAskWBs" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -110,7 +101,6 @@ get_header(); ?>
 							<a href="https://history.cah.ucf.edu/" target="_blank"><li>History</li></a>
 							<a href="https://judaicstudies.cah.ucf.edu/" target="_blank"><li>Judaic Studies</li></a>
 							<a href="https://las.cah.ucf.edu/" target="_blank"><li>Latin American Studies</li></a>
-							<a href="https://medieval.cah.ucf.edu/" target="_blank"><li>Medieval &amp; Renaissance Studies</li></a>
 							<a href="https://middleeasternstudies.cah.ucf.edu/" target="_blank"><li>Middle Eastern Studies</li></a>
 							<a href="https://mll.cah.ucf.edu/" target="_blank"><li>Modern Languages and Literatures</li></a>
 							<a href="https://performingarts.cah.ucf.edu/" target="_blank"><li>Performing Arts</li></a>
