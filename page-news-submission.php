@@ -11,8 +11,22 @@
 ?>
 
 <?php get_header(); 
-	
-	$mail = new PHPMailer();
+
+	if(isset($_POST['submit']))
+	{
+	 	$to = 'aleangel1212@gmail.com';
+	 	$subject = 'CAH News Submission';
+	   	$headline=$_POST['headline'];
+
+	   	if(mail($to,$subject,$headline))
+	   	{
+	     	echo "mail sent";
+	   	}	
+	   	else
+	   	{
+	     	echo "mail failed";
+	   	}
+	}
 	
 ?>
 
